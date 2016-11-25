@@ -1,0 +1,342 @@
+html
+{
+	background: fixed;
+	background-attachment: fixed;
+	background-image: url(images/bg.png);
+}
+
+header
+{
+	height: 200px;
+}
+
+body
+{
+	min-width: 470px;
+	max-width: 890px;
+	height: 100%;
+	background-color: RGBA(255, 255, 255, 0.6);
+	margin: 0 auto;
+	font-family: 'Jura', sans-serif;
+	font-size: 18px;
+	font-weight: bolder;
+	padding-bottom: 130px;
+	
+}
+
+/*div [alt="fp-product"]*/
+div .fp-product
+{
+	display: inline-block;
+	width: 48%;
+	text-align: left;
+	float: left;
+	height: 100%;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+div .product-page
+{
+	display: inline-block;
+	width: 32%;
+	text-align: center;
+	float: left;
+	height: 100%;
+	margin-right: 2px;
+	margin-left: 2px;
+}
+
+/*body footer
+{
+	text-align: center;
+	position: fixed;
+	min-height: calc(100vh - 80px);
+    bottom: 0;
+    padding: 18px;
+    background-color: #fff;
+} */
+
+/*p:first-letter
+{
+	color: #0072ff;
+}*/
+
+fieldset
+{
+	border-radius: 5px;
+}
+
+[alt="Navigation"]
+{
+	text-align: center;
+}
+
+[alt="product-image"]
+{
+	width: 210px;
+	margin-right: 20px;
+	float: left;
+}
+
+[alt="product-nav"]
+{
+	overflow: hidden;
+}
+
+table
+{
+	border-collapse: collapse;
+}
+
+td, tr
+{
+    padding: 0px;
+    border: 1px solid gray;
+}
+
+.siteimg
+{
+	box-shadow: 0 0 5px gray;
+}
+
+.fp-siteimg
+{
+	display: block;
+	margin:auto;
+    margin-top: 5px;
+    box-shadow: 0 0 5px gray;
+    vertical-align: middle;
+
+}
+
+.siteimg:hover, .fp-siteimg:hover
+{
+	box-shadow: none;
+}
+
+/*img:not(.ya-map) {
+    здесь ваши стили, которые должны примениться ко всем изображениям, кроме тех,  у которых есть класс ya-map
+}*/
+
+ul
+{
+    list-style-image: url(images/ul_marker.png);
+}
+
+input
+{
+	font-family: 'Jura', sans-serif;
+	width: 40%;
+}
+
+input:hover:invalid, textarea:hover:invalid
+{
+	background: #fdd;
+}
+
+input:valid, textarea:valid
+{
+	background: #dfd;
+}
+
+input:hover, textarea:hover
+{
+	color: #0072ff;
+}
+
+textarea
+{
+	font-family: 'Jura', sans-serif;
+	width: 40%;
+	text-transform: capitalize;
+}
+
+h1, h2
+{
+	text-shadow: 1px 1px 2px gray;
+}
+
+a
+{
+	font-size: 20px;
+	font-weight: bolder;
+	color: #0072ff;
+	text-decoration: none;
+}
+
+a:hover, a:hover
+{
+	color: blue;
+	text-shadow: 1px 1px 2px gray;
+}
+
+legend
+{
+	text-align: left;
+}
+
+footer
+{
+	position: fixed;
+	text-align: center;
+    bottom: 0;
+    padding: 10px;
+    width: 890px;
+    background-color: #fff;
+}
+
+.button-blue
+{
+    border-color: #0d78b6 #0d78b6 #0b689e;
+    background: #0099ff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 18px;
+}
+
+.buy-button
+{
+    border-color: #0d78b6 #0d78b6 #0b689e;
+    background: #0099ff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 18px;
+    width: 80%;
+    margin: 0 auto 0 auto;
+}
+
+.button-blue:hover, .buy-button:hover
+{
+	color: white;
+}
+
+
+/* Всплывающая картинка
+Код не мой, я экспериментировал*/
+
+.overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+}
+/* активируем слой затемнения */
+.overlay:target {
+    display: block;
+}
+/* стили модального окна */
+.popup {
+    top: -100%;
+    right: 0;
+    left: 50%;
+    font-size: 14px;
+    z-index: 20;
+    margin: 0;
+    width: 85%;
+    min-width: 320px;
+    max-width: 600px;
+/* фиксированное позиционирование, окно стабильно при прокрутке */
+    position: fixed;
+    padding: 15px;
+    border: 1px solid #383838;
+    background: #fefefe;
+/* скругление углов */
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+}
+/* активируем модальный блок */
+.overlay:target+.popup {
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    top: 20%;
+}
+/* формируем кнопку закрытия */
+.close {
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    padding: 0;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    background-color: rgba(61, 61, 61, 0.8);
+    -webkit-box-shadow: 0px 0px 10px #000;
+    -moz-box-shadow: 0px 0px 10px #000;
+    box-shadow: 0px 0px 10px #000;
+    text-align: center;
+    text-decoration: none;
+    font: 13px/20px 'Tahoma', Arial, sans-serif;
+    font-weight: bold;
+    -webkit-transition: all ease .8s;
+    -moz-transition: all ease .8s;
+    -ms-transition: all ease .8s;
+    -o-transition: all ease .8s;
+    transition: all ease .8s;
+}
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "X";
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+    font-size: 12px;
+}
+.close:hover {
+    background-color: rgba(252, 20, 0, 0.8);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);    
+}
+/* изображения внутри окна */
+.popup img {
+    width: 100%;
+    height: auto;
+}
+
+.contacts-li
+{
+	list-style-image: none;
+	list-style-type: none;
+}
+
+.contacts-icons
+{
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	background-image: url(images/sprites.png);
+	
+}
+
+.tel
+{
+	background-position: -50px 3px;
+}
+
+.address
+{
+	background-position: -176px -23px;
+}
+
+.email
+{
+	background-position: -151px 3px;
+}

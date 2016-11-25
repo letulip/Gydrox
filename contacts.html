@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>
+	GX SHOP
+	</title>
+
+	<meta charset="utf-8">
+	<link rel = "stylesheet" type = "text/css" href = "style.css">
+	<link href="https://fonts.googleapis.com/css?family=Jura:400,600&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<img src="images/Header.jpg" border="0" alt="GX Logo here" title="Гидрокс, Гидроизоляция" />
+</header>
+
+<hr>
+
+	<fieldset alt="Navigation">
+		<legend><h2>Навигация по сайту</h2></legend>
+		<nav>
+			<a href="index.html">Главная</a> |
+			<a href="nabuh.html">Набухающая резина</a> |
+			<a href="bento.html">Бентонитовый шнур</a> |
+		    <a href="faq.html">Частые вопросы</a> |
+		    <a href="contacts.html" style = "color : blue; font-size : 22px; text-shadow: 1px 1px 2px gray;">Контакты</a>
+		</nav>
+	</fieldset>
+		
+
+	<h1>
+		Где нас найти, как с нами связаться
+	</h1>
+
+	<h2>Адрес</h2>
+		<ul>
+			<li class="contacts-li"><span class="contacts-icons tel"></span>тел.: +7(499)180-50-01</li>
+			<li class="contacts-li"><span class="contacts-icons address"></span>Адрес: Ивовая ул., д. 2/8, оф.210</li>
+			<li class="contacts-li"><span class="contacts-icons email"></span>Email: writeus@gydrox.ru</li>
+			
+		</ul>
+			<div>
+
+				<script src="http://api-maps.yandex.ru/1.1/?key=AFMENE0BAAAAof9YLwIA21nR1y_EaLNoHcOJEqvr2Efbs80AAAAAAAAAAAAnOV9y1VU2vVMnHJHzIiJ6SQjkOw==&modules=pmap&wizard=constructor" type="text/javascript"></script>
+				<script type="text/javascript">
+				    YMaps.jQuery(window).load(function () {
+				        var map = new YMaps.Map(YMaps.jQuery("#YMapsID-5742")[0]);
+				        map.setCenter(new YMaps.GeoPoint(37.647134,55.856591), 15, YMaps.MapType.MAP);
+				        map.addControl(new YMaps.Zoom());
+				        map.addControl(new YMaps.ToolBar());
+				        map.addControl(new YMaps.TypeControl([
+				            YMaps.MapType.MAP,
+				            YMaps.MapType.SATELLITE,
+				            YMaps.MapType.HYBRID,
+				            YMaps.MapType.PMAP
+				        ], [0, 1, 2, 3]));
+
+				        YMaps.Styles.add("constructor#pmrdmPlacemark", {
+				            iconStyle : {
+				                href : "http://api-maps.yandex.ru/i/0.3/placemarks/pmrdm.png",
+				                size : new YMaps.Point(28,29),
+				                offset: new YMaps.Point(-8,-27)
+				            }
+				        });
+
+
+				        YMaps.Styles.add("constructor#FF3732c85Polyline", {
+				            lineStyle : {
+				                strokeColor : "FF3732c8",
+				                strokeWidth : 5
+				            }
+				        });
+				       map.addOverlay(createObject("Placemark", new YMaps.GeoPoint(37.642714,55.858208), "constructor#pmrdmPlacemark", "������ ��., �. 2/8, ��. 440"));
+				       map.addOverlay(createObject("Polyline", [new YMaps.GeoPoint(37.642478,55.858154),new YMaps.GeoPoint(37.642714,55.857695),new YMaps.GeoPoint(37.650374,55.857164),new YMaps.GeoPoint(37.651275,55.854775)], "constructor#FF3732c85Polyline", ""));
+				       map.addOverlay(createObject("Polyline", [new YMaps.GeoPoint(37.654068,55.856092),new YMaps.GeoPoint(37.653639,55.856937),new YMaps.GeoPoint(37.642738,55.857697),new YMaps.GeoPoint(37.642481,55.858144)], "constructor#FF3732c85Polyline", ""));
+				        
+				        function createObject (type, point, style, description) {
+				            var allowObjects = ["Placemark", "Polyline", "Polygon"],
+				                index = YMaps.jQuery.inArray( type, allowObjects),
+				                constructor = allowObjects[(index == -1) ? 0 : index];
+				                description = description || "";
+				            
+				            var object = new YMaps[constructor](point, {style: style, hasBalloon : !!description});
+				            object.description = description;
+				            
+				            return object;
+				        }
+				    });
+				</script>
+				</div>
+
+				<div id="YMapsID-5742" style="width: 100%; height:375px"></div>
+
+<br>
+	<fieldset style="border: 0px">
+		<legend><h2>Напишите нам</h2></legend>
+		<input type = "text" size = "30" placeholder = "Ваше Имя" required="">
+		<br>
+		<input type = "email" pattern="[^ @]*@[^ @]*" size = "30" placeholder = "Ваш Email адрес" required="">
+		<br>
+		<input type = "text" size = "30" placeholder = "Тема Вашего сообщения" required="">
+		<br>
+		<textarea name="comment" cols="40" rows="5" placeholder = "Введите Ваше сообщение" required=""></textarea>
+		<br>
+		<input type = "button" value = "Отправить" class="button-blue">
+	</fieldset>
+
+<footer>
+
+<hr>
+
+v0.1 &copy; Gydrox. All rights reserved
+</footer>
+
+</body>
+
+</html>
